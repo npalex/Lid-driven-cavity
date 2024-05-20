@@ -26,18 +26,6 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 
 $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
 
-Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
-
-$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
-
-$$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{n} + F_{i+\frac{1}{2},j}^{n}\right). $$
-
-followed by sweeps in the y-direction
-
-$$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t ( \hat B \cdot Q_{i,j}^* )_{i,j}$$
-
-$$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t (\hat B \cdot Q_y^{*})_{i,j}$$
-
 where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices given by
 
 $$ \hat A =        \begin{bmatrix} 
@@ -57,6 +45,16 @@ $$ \hat u_{i-\frac{1}{2},j} = \frac{U_{i,j} + U_{i-1,j}}{2}$$
 and
 
 $$ \hat v_{i-\frac{1}{2},j} = \frac{V_{i,j} + V_{i-1,j}}{2}$$
+
+Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
+
+$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
+
+$$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{n} + F_{i+\frac{1}{2},j}^{n}\right). $$
+
+followed by sweeps in the y-direction
+
+$$Q_{i,j}^{**} = Q^{*}_{i,j} - \frac{\Delta t}{\Delta y} \left( F_{i,j-\frac{1}{2}}^{*} + F_{i,j+\frac{1}{2}}^{*}\right). $$
 
 In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
 
