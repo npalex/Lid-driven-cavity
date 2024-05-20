@@ -95,6 +95,8 @@ which is then discretized with Nuemann boundary conditions to produce a system o
 
 &emsp;So far, the solution $\widetilde q$ is not divergence free. In order to satisfy continuity, $\widetilde q$ is projected into a divergence-free space by correcting the result for pressure-driven flow via
 
+$$ q^{n+1}_{i,j} = \widetilde q_{i,j} $$
+
 $$ q^{n+1}_{i,j} = \widetilde q_{i,j} -\Delta t\nabla p^{n+1}$$
 
 ### **Step 5. Update the edge velocities for pressure-driven flow:**
