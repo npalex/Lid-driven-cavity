@@ -1,6 +1,6 @@
 # **Lid-driven cavity flow of an incompressible, Newtonian fluid**
 
-&emsp; This program solves the mass conservation and incompressible Navier Stokes equations in 2D, given by
+&emsp; This program solves the continuity and incompressible Navier Stokes equations in 2D, given by
 
 $$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
@@ -59,7 +59,7 @@ where $F_{i-\frac{1}{2},j}$ is the numerical flux at the interface between cells
 
 &emsp; Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
 
-**Step 2. Solve the diffusion equation:** 
+### **Step 2. Solve the diffusion equation:** 
 
 &emsp; An alternating direction implicit (ADI) method is employed to update the numerical solution for diffusion via
 
@@ -67,7 +67,7 @@ $$ q_t = \frac{1}{Re}(q_{xx} + q_{yy}). $$
 
 Two difference equations are used to advance successive time steps of $\frac{\Delta t}{2}$. The first equation is implict in the x-direction
 
-$$ Q_{i,j}^{***} = Q_{i,j}^{**} + \frac{\alpha}{2}\left(\delta^2_x Q^{***} + \delta^2_y Q^{**}\right) $$
+$$ Q_{i,j}^{\*\*\*} = Q_{i,j}^{\*\*} + \frac{\alpha}{2}\left(\delta^2_x Q^{\*\*\*} + \delta^2_y Q^{\*\*}\right) $$
 
 and the second equation is implicit in the y-direction
 
@@ -79,13 +79,13 @@ $$ \alpha = \frac{\Delta t}{(\Delta x)^2Re}.$$
 
 and $\delta^2_x$ denotes the central difference of the 2nd partial derivative with respect to $x$.
 
-**Step 3. Update the edge velocities for diffusion:**
+### **Step 3. Update the edge velocities for diffusion:**
 
 &emsp; The velocities at the edges of each grid cell are updated via linear interpolation:
 
 $$ \widetilde{q}_{i-\frac{1}{2},j} = \frac{\widetilde{Q}_{i-1,j} + \widetilde{Q}_{i,j}}{2} $$
 
-**Step 4. Compute the pressure distribution:**
+### **Step 4. Compute the pressure distribution:**
 
 &emsp;The divergence of the equation above provides a Laplacian equation for the pressure,
 
@@ -96,7 +96,7 @@ which is then discretized with Nuemann boundary conditions to produce a system o
 
 $$ q^{n+1}_{i,j} = \widetilde{q}^{}_{i,j} -\Delta t\nabla p^{n+1}$$
 
-**Step 5. Update the edge velocities for pressure-driven flow:**
+### **Step 5. Update the edge velocities for pressure-driven flow:**
 
 &emsp; The cell-centered velocities are determined by using central differences for the pressure gradient via
 
@@ -106,7 +106,7 @@ and
 
 $$ v^{n+1}_{i,j-\frac{1}{2}} = \widetilde{v}_{i,j-\frac{1}{2}} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i,j-1}}{\Delta y}\right) $$
 
-**Step 6. Update the cell-centered velocities for pressure-driven flow:**
+### **Step 6. Update the cell-centered velocities for pressure-driven flow:**
 
 &emsp;Finally, the cell-centered velocities are determined by using central differences for the pressure gradient according to
 
@@ -120,7 +120,10 @@ which produces checkerboard oscillations in pressure. However, these oscillation
 
 ## **Results**:
 
-**References**:
+## **References**:
+
+L.Lee and R.J.LeVeque, 2003. An immersed interface method for incompressible Navier
+	Stokes equations. SIAM J. Sci. Comput., 25, 832–856.
 
 Clawpack Development Team (2023), Clawpack Version 5.9.2,
     http://www.clawpack.org, doi: 10.5281/zenodo.10076317
