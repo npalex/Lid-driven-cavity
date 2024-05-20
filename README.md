@@ -28,11 +28,11 @@ $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
 
 Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
 
-$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t \hat A \cdot Q_x^{n}$$
+$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
 
 followed by sweeps in the y-direction
 
-$$ Q_{i,j}^{**} = Q_{i,j}^{*} - \Delta t \hat B \cdot Q_y^{*} $$
+$$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t (\hat B \cdot Q_y^{*})_{i,j} $$
 
 where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices given by
 
