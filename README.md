@@ -39,7 +39,7 @@ $$ \hat B =        \begin{bmatrix}
                                 \hat v & \hat u \\
                                 0 & 2 \hat v \end{bmatrix}. $$
 
-Here, $\hat u$ and $\hat v$ are Roe averages (in this case, they are linear interpolations of cell-centered velocities) defined at the edge of each grid cell. For example, Roe averages for the x-sweeps used to evaluate the matrix $A$ are given by
+Here, $\hat u$ and $\hat v$ are Roe averages (in this case, they are linear interpolations of cell-centered velocities) defined at the edge of each grid cell. For example, Roe averages used to evaluate the matrix $A$ are given by
 
 $$ \hat u_{i-\frac{1}{2},j} = \frac{U_{i,j} + U_{i-1,j}}{2}$$
 
