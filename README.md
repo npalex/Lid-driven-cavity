@@ -71,7 +71,9 @@ $$ Q_{i,j}^{\*\*\*} = Q_{i,j}^{\*\*} + \frac{\alpha}{2}\left(\delta^2_x Q^{\*\*\
 
 and the second equation is implicit in the y-direction
 
-$$ \widetilde{Q}_{i,j} = Q_{i,j}^{\*\*\*} + \frac{\alpha}{2}\left(\delta^2_x Q^{\*\*\*} + \delta^2_y \widetilde{Q}\right). $$
+$$ \widetilde {Q}_{i,j} = Q_{i,j}^{\*\*\*}  $$
+
+$$ \widetilde {Q}_{i,j} = Q_{i,j}^{\*\*\*} + \frac{\alpha}{2}\left(\delta^2_x Q^{\*\*\*} + \delta^2_y \widetilde {Q}\right). $$
 
 The parameter $\alpha$ is defined by
 
