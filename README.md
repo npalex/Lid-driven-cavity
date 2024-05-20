@@ -50,11 +50,11 @@ Dimensional splitting via the donor cell upwind method (DCU) is used to advanced
 
 $$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
 
-$$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{n} + F_{i+\frac{1}{2},j}^{n}\right). $$
+$$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i+\frac{1}{2},j}^{n} - F_{i-\frac{1}{2},j}^{n}\right). $$
 
 followed by sweeps in the y-direction
 
-$$Q_{i,j}^{**} = Q_{i,j}^{*} - \frac{\Delta t}{\Delta x} \left( G_{i,j-\frac{1}{2}}^{\*} + G_{i,j+\frac{1}{2}}^{\*}\right). $$
+$$Q_{i,j}^{**} = Q_{i,j}^{*} - \frac{\Delta t}{\Delta x} \left( G_{i,j+\frac{1}{2}}^{\*} - G_{i,j-\frac{1}{2}}^{\*}\right). $$
 
 $$Q_{i,j}^* = Q^*_{i,j} - \frac{\Delta t}{\Delta y} \left( G_{i,j-\frac{1}{2}}^{n} + G_{i,j+\frac{1}{2}}^{n}\right). $$
 
