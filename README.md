@@ -19,7 +19,6 @@ $$Re = \frac{\rho U L}{\eta},$$
 where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid speed, and lid length, respectively, and $u$ and $v$ are the non-dimensional components of the fluid velocity in the $x$ and $y$ directions. The time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{L}{U}$ and the inertial pressure scale was chosen, equal to $\bar p = \rho U^2$. The boundary conditions are no-slip and no-flow at the cavity walls and the fluid is initially at rest. 
 
 ## **Numerical Scheme:**
-
 &emsp; Following Lee and Leveque (2003), a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
 
 **Step 1. Solve the convection equation:**
@@ -27,14 +26,6 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 &emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
 
 $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
-
-Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
-
-$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
-
-followed by sweeps in the y-direction
-
-$$ Q_{i,j}^{**}= Q_{i,j}^{\*} - \Delta t (\hat B \cdot Q_y^{\*})_{i,j}$$
 
 where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices given by
 
@@ -56,7 +47,15 @@ and
 
 $$ \hat v_{i-\frac{1}{2},j} = \frac{V_{i,j} + V_{i-1,j}}{2}$$
 
-In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
+Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
+
+$$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i+\frac{1}{2},j}^{n} - F_{i-\frac{1}{2},j}^{n}\right). $$
+
+followed by sweeps in the y-direction
+
+$$Q_{i,j}^{**} = Q_{i,j}^{*} - \frac{\Delta t}{\Delta y} \left( G_{i,j+\frac{1}{2}}^{\*} - G_{i,j-\frac{1}{2}}^{\*}\right). $$
+
+where $F_{i-\frac{1}{2},j}$ is the numerical flux at the interface between cells $(i,j)$ and $(i-1,j)$ for the 1-dimensional problem in the x-direction and and, similarly, $G_{i,j-\frac{1}{2}}$ is the flux at the interface between cells $i,j$ and $i,j-1$ for the 1D problem in the y-direction.. In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
 
 **Step 2. Solve the diffusion equation:** 
 
