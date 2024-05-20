@@ -83,38 +83,38 @@ and $\delta^2_x$ denotes the central difference of the 2nd partial derivative wi
 
 &emsp; The velocities at the edges of each grid cell are updated via linear interpolation:
 
-$$ \widetilde{q}_{i-\frac{1}{2},j} = \frac{\widetilde{Q}_{i-1,j} + \widetilde{Q}_{i,j}}{2} $$
+$$ \widetilde q_{i-\frac{1}{2},j} = \frac{\widetilde Q_{i-1,j} + \widetilde Q_{i,j}}{2} $$
 
 ### **Step 4. Compute the pressure distribution:**
 
 &emsp;The divergence of the equation above provides a Laplacian equation for the pressure,
 
-$$ \nabla^2 p^{n+1} = \frac{1}{\Delta t} \nabla \cdot \widetilde{q}_{i,j} ,$$
+$$ \nabla^2 p^{n+1} = \frac{1}{\Delta t} \nabla \cdot \widetilde q_{i,j} ,$$
 which is then discretized with Nuemann boundary conditions to produce a system of linear equations, $Ax = b$. However, the matrix $A$ is singular because the equation set has an inifinite number of solutions within an arbitrary reference pressure. Hence, a ficticious source term $C_0 p^{n+1}$ has been added with proportionality constant $C_0$, which is defined on the order of 1e-9 to render the influence of the source negligble, so that $A$ is non-singular.  
 
-&emsp;So far, the solution $\widetilde{q}$ is not divergence free. In order to satisfy continuity, $\widetilde{q}$ is projected into a divergence-free space by correcting the result for pressure-driven flow via
+&emsp;So far, the solution $\widetilde q$ is not divergence free. In order to satisfy continuity, $\widetilde q$ is projected into a divergence-free space by correcting the result for pressure-driven flow via
 
-$$ q^{n+1}_{i,j} = \widetilde{q}^{}_{i,j} -\Delta t\nabla p^{n+1}$$
+$$ q^{n+1}_{i,j} = \widetilde q^{}_{i,j} -\Delta t\nabla p^{n+1}$$
 
 ### **Step 5. Update the edge velocities for pressure-driven flow:**
 
 &emsp; The cell-centered velocities are determined by using central differences for the pressure gradient via
 
-$$ u^{n+1}_{i-\frac{1}{2},j} = \widetilde{u}_{i-\frac{1}{2},j} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i-1,j}}{\Delta x}\right) $$
+$$ u^{n+1}_{i-\frac{1}{2},j} = \widetilde u_{i-\frac{1}{2},j} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i-1,j}}{\Delta x}\right) $$
 
 and
 
-$$ v^{n+1}_{i,j-\frac{1}{2}} = \widetilde{v}_{i,j-\frac{1}{2}} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i,j-1}}{\Delta y}\right) $$
+$$ v^{n+1}_{i,j-\frac{1}{2}} = \widetilde v_{i,j-\frac{1}{2}} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i,j-1}}{\Delta y}\right) $$
 
 ### **Step 6. Update the cell-centered velocities for pressure-driven flow:**
 
 &emsp;Finally, the cell-centered velocities are determined by using central differences for the pressure gradient according to
 
-$$ U^{n+1}_{i,j} = \widetilde{U}_{i,j} - \Delta t \left( \frac{p^{n+1}_{i+1,j} - p^{n+1}_{i-1,j}}{2 \Delta x}\right) $$
+$$ U^{n+1}_{i,j} = \widetilde U_{i,j} - \Delta t \left( \frac{p^{n+1}_{i+1,j} - p^{n+1}_{i-1,j}}{2 \Delta x}\right) $$
 
 and
 
-$$ V^{n+1}_{i,j} = \widetilde{V}_{i,j} - \Delta t \left( \frac{p^{n+1}_{i,j+1} - p^{n+1}_{i,j-1})}{2 \Delta y}\right), $$
+$$ V^{n+1}_{i,j} = \widetilde V_{i,j} - \Delta t \left( \frac{p^{n+1}_{i,j+1} - p^{n+1}_{i,j-1})}{2 \Delta y}\right), $$
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
