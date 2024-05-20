@@ -22,17 +22,17 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 
 **Step 1. Solve the convection equation:**
 
-&emsp;A Roe solver $\textemdash$ $&mdash;$ i.e., a locally linear, approximate Riemann solver based on the Godunov (generalized upwind) method$\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
+&emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov (generalized upwind) method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
 
 $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
 
 Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
 
-$$ Q^{*}_{i,j}= Q^n_{i,j} + \hat A \cdot Q^{n}_x$$
+$$ Q_{i,j}^{*}= Q_{i,j}^n + \hat A \cdot Q_x^{n}$$
 
 followed by sweeps in the y-direction
 
-$$ Q^{**}_{i,j} = Q^{*}_{i,j} + \hat B \cdot Q^{*}_y $$
+$$ Q_{i,j}^{**} = Q_{i,j}^{*} + \hat B \cdot Q_y^{*} $$
 
 where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices given by
 
@@ -64,11 +64,11 @@ $$ q_t = \frac{1}{Re}(q_{xx} + q_{yy}). $$
 
 Two difference equations are used to advance successive time steps of $\frac{\Delta t}{2}$. The first equation is implict in the x-direction
 
-$$ Q^{***}_{i,j} = Q^{**}_{i,j} + \frac{\alpha}{2}\left(\delta^2_x Q^{***} + \delta^2_y Q^{**}\right) $$
+$$ Q_{i,j}^{***} = Q_{i,j}^{**} + \frac{\alpha}{2}\left(\delta^2_x Q^{***} + \delta^2_y Q^{**}\right) $$
 
 and the second equation is implicit in the y-direction
 
-$$ \widetilde{Q}_{i,j} = Q^{***}_{i,j} + \frac{\alpha}{2}\left(\delta^2_x Q^{***} + \delta^2_y \widetilde{Q}\right). $$
+$$ \widetilde{Q}_{i,j} = Q_{i,j}^{***} + \frac{\alpha}{2}\left(\delta^2_x Q^{***} + \delta^2_y \widetilde{Q}\right). $$
 
 The parameter $\alpha$ is defined by
 
