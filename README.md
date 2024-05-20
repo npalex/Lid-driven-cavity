@@ -50,6 +50,8 @@ Dimensional splitting via the donor cell upwind method (DCU) is used to advanced
 
 $$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
 
+$$ Q_{i,j}^{**}= Q_{i,j}^{\*} - \Delta t (\hat B \cdot Q_y^{\*})_{i,j}$$
+
 $$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i+\frac{1}{2},j}^{n} - F_{i-\frac{1}{2},j}^{n}\right). $$
 
 followed by sweeps in the y-direction
