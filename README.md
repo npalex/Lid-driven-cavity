@@ -21,7 +21,7 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 ## **Numerical Scheme:**
 &emsp; Following Lee and Leveque (2003), a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
 
-**Step 1. Solve the convection equation:**
+# **Step 1. Solve the convection equation:**
 
 &emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
 
