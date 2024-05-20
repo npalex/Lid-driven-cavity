@@ -95,15 +95,13 @@ which is then discretized with Nuemann boundary conditions to produce a system o
 
 &emsp;So far, the solution $\widetilde q$ is not divergence free. In order to satisfy continuity, $\widetilde q$ is projected into a divergence-free space by correcting the result for pressure-driven flow via
 
-$$ q_{i,j}^{n+1} = \widetilde q_{i,j} $$
-
-$$ q^{n+1}_{i,j} = \widetilde q_{i,j} -\Delta t\nabla p^{n+1}$$
+$$ q_{i,j}^{n+1} = \widetilde q_{i,j} -\Delta t\nabla p^{n+1}$$
 
 ### **Step 5. Update the edge velocities for pressure-driven flow:**
 
 &emsp; The cell-centered velocities are determined by using central differences for the pressure gradient via
 
-$$ u^{n+1}_{i-\frac{1}{2},j} = \widetilde u_{i-\frac{1}{2},j} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i-1,j}}{\Delta x}\right) $$
+$$ u_{i-\frac{1}{2},j}^{n+1} = \widetilde u_{i-\frac{1}{2},j} - \Delta t \left( \frac{p_{i,j}^{n+1} - p_{i-1,j}^{n+1}}{\Delta x}\right) $$
 
 and
 
