@@ -19,7 +19,7 @@ $$Re = \frac{\rho U L}{\eta},$$
 where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid speed, and lid length, respectively, and $u$ and $v$ are the non-dimensional components of the fluid velocity in the $x$ and $y$ directions. The time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{L}{U}$ and the inertial pressure scale was chosen, equal to $\bar p = \rho U^2$. The boundary conditions are no-slip and no-flow at the cavity walls and the fluid is initially at rest. 
 
 ## **Numerical Scheme:**
-&emsp; Following Lee and Leveque (2003), a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
+&emsp; Following Lee and Leveque (2003),^1 a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
 
 ### **Step 1. Solve the convection equation:**
 
@@ -124,14 +124,14 @@ which produces checkerboard oscillations in pressure. However, these oscillation
 
 ## **References**:
 
-L.Lee and R.J.LeVeque, 2003. An immersed interface method for incompressible Navier
-	Stokes equations. SIAM J. Sci. Comput., 25, 832–856.
+1.	L.Lee and R.J.LeVeque, 2003. An immersed interface method for incompressible Navier
+		Stokes equations. SIAM J. Sci. Comput., 25, 832–856.
 
-Clawpack Development Team (2023), Clawpack Version 5.9.2,
-    http://www.clawpack.org, doi: 10.5281/zenodo.10076317
+2.	Clawpack Development Team (2023), Clawpack Version 5.9.2,
+		http://www.clawpack.org, doi: 10.5281/zenodo.10076317
 
-R. J. LeVeque, 1997. Wave propagation algorithms for multi-dimensional 
-    hyperbolic systems. J. Comput. Phys. 131, 327–353.
+3.	R. J. LeVeque, 1997. Wave propagation algorithms for multi-dimensional 
+		hyperbolic systems. J. Comput. Phys. 131, 327–353.
 
-R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
-    University Press, Cambridge, UK, 2002.
+4.	R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
+		University Press, Cambridge, UK, 2002.
