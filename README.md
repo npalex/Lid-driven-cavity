@@ -54,7 +54,7 @@ $$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{
 
 followed by sweeps in the y-direction
 
-$$Q_{i,j}^{**} = Q^*_{i,j} - \frac{\Delta t}{\Delta y} G_{i,j}^{*} + G_{i+\frac{1}{2},j}^{n}. $$
+$$Q_{i,j}^{**} = Q^*_{i,j} - \frac{\Delta t}{\Delta y} $$
 
 $$Q_{i,j}^* = Q^*_{i,j} - \frac{\Delta t}{\Delta y} \left( G_{i,j-\frac{1}{2}}^{n} + G_{i,j+\frac{1}{2}}^{n}\right). $$
 
