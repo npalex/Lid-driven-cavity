@@ -105,17 +105,17 @@ $$ u_{i-\frac{1}{2},j}^{n+1} = \widetilde u_{i-\frac{1}{2},j} - \Delta t \left( 
 
 and
 
-$$ v^{n+1}_{i,j-\frac{1}{2}} = \widetilde v_{i,j-\frac{1}{2}} - \Delta t \left( \frac{p^{n+1}_{i,j} - p^{n+1}_{i,j-1}}{\Delta y}\right) $$
+$$ v_{i,j-\frac{1}{2}}^{n+1} = \widetilde v_{i,j-\frac{1}{2}} - \Delta t \left( \frac{p_{i,j}^{n+1} - p_{i,j-1}^{n+1}}{\Delta y}\right) $$
 
 ### **Step 6. Update the cell-centered velocities for pressure-driven flow:**
 
 &emsp;Finally, the cell-centered velocities are determined by using central differences for the pressure gradient according to
 
-$$ U^{n+1}_{i,j} = \widetilde U_{i,j} - \Delta t \left( \frac{p^{n+1}_{i+1,j} - p^{n+1}_{i-1,j}}{2 \Delta x}\right) $$
+$$ U_{i,j}^{n+1} = \widetilde U_{i,j} - \Delta t \left( \frac{p_{i+1,j}^{n+1} - p_{i-1,j}^{n+1}}{2 \Delta x}\right) $$
 
 and
 
-$$ V^{n+1}_{i,j} = \widetilde V_{i,j} - \Delta t \left( \frac{p^{n+1}_{i,j+1} - p^{n+1}_{i,j-1})}{2 \Delta y}\right), $$
+$$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - p_{i,j-1}^{n+1})}{2 \Delta y}\right), $$
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
