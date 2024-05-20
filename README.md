@@ -54,6 +54,8 @@ $$Q_{i,j}^* = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{
 
 followed by sweeps in the y-direction
 
+$$Q_{i,j}^** = Q^n_{i,j} - \frac{\Delta t}{\Delta x} \left( F_{i-\frac{1}{2},j}^{n} + F_{i+\frac{1}{2},j}^{n}\right). $$
+
 $$Q_{i,j}^* = Q^*_{i,j} - \frac{\Delta t}{\Delta y} \left( G_{i,j-\frac{1}{2}}^{n} + G_{i,j+\frac{1}{2}}^{n}\right). $$
 
 In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
