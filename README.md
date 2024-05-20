@@ -32,7 +32,7 @@ $$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
 
 followed by sweeps in the y-direction
 
-$$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t (\hat A \cdot Q_x^{n})_{i,j}$$
+$$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t (\hat B \cdot Q_y^{*})_{i,j}$$
 
 $$ Q_{i,j}^{**}= Q_{i,j}^{*} - \Delta t (\hat B \cdot Q_y^{*})_{i,j}$$
 
