@@ -1,6 +1,6 @@
 # **Lid-driven cavity flow of an incompressible, Newtonian fluid**
 
-&emsp; This program solves the incompressible Navier Stokes equations in 2D, given by
+&emsp; This program solves the mass conservation and incompressible Navier Stokes equations in 2D, given by
 
 $$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
@@ -22,7 +22,7 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 
 **Step 1. Solve the convection equation:**
 
-&emsp;A Roe solver $\textemdash$i.e., a locally linear, approximate Riemann solver based on the Godunov (generalized upwind) method$\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
+&emsp;A Roe solver $\textemdash$ $&mdash;$ i.e., a locally linear, approximate Riemann solver based on the Godunov (generalized upwind) method$\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
 
 $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
 
