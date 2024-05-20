@@ -19,7 +19,7 @@ $$Re = \frac{\rho U L}{\eta},$$
 where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid speed, and lid length, respectively, and $u$ and $v$ are the non-dimensional components of the fluid velocity in the $x$ and $y$ directions. The time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{L}{U}$ and the inertial pressure scale was chosen, equal to $\bar p = \rho U^2$. The boundary conditions are no-slip and no-flow at the cavity walls and the fluid is initially at rest. 
 
 ## **Numerical Scheme:**
-&emsp; Following Lee and Leveque (2003),^1 a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
+&emsp; Following Lee and Leveque (2003),$^1$ a *fractional step* approach is used to solve the system of equations above, which decomposes the problem into the following steps:
 
 ### **Step 1. Solve the convection equation:**
 
