@@ -22,17 +22,17 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 
 **Step 1. Solve the convection equation:**
 
-&emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov (generalized upwind) method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
+&emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
 
 $$ q_t + \hat A \cdot q_x + \hat B \cdot q_y = 0 . $$
 
 Dimensional splitting via the donor cell upwind method (DCU) is used to advanced the cell-centered velocities $Q=(U,V)$ forward in time via sweeps in the x-direction
 
-$$ Q_{i,j}^{*}= Q_{i,j}^n + \hat A \cdot Q_x^{n}$$
+$$ Q_{i,j}^{*}= Q_{i,j}^n - \Delta t \hat A \cdot Q_x^{n}$$
 
 followed by sweeps in the y-direction
 
-$$ Q_{i,j}^{**} = Q_{i,j}^{*} + \hat B \cdot Q_y^{*} $$
+$$ Q_{i,j}^{**} = Q_{i,j}^{*} - \Delta t \hat B \cdot Q_y^{*} $$
 
 where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices given by
 
