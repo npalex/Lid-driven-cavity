@@ -89,6 +89,8 @@ $$ \widetilde q_{i-\frac{1}{2},j} = \frac{\widetilde Q_{i-1,j} + \widetilde Q_{i
 
 &emsp;The divergence of the equation above provides a Laplacian equation for the pressure,
 
+$$ \nabla p^{n+1} = ,$$
+
 $$ \nabla^2 p^{n+1} = \frac{1}{\Delta t} \nabla \cdot \widetilde q_{i,j} ,$$
 which is then discretized with Nuemann boundary conditions to produce a system of linear equations, $Ax = b$. However, the matrix $A$ is singular because the equation set has an inifinite number of solutions within an arbitrary reference pressure. Hence, a ficticious source term $C_0 p^{n+1}$ has been added with proportionality constant $C_0$, which is defined on the order of 1e-9 to render the influence of the source negligble, so that $A$ is non-singular.  
 
