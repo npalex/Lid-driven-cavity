@@ -55,7 +55,7 @@ followed by sweeps in the y-direction
 
 $$Q_{i,j}^{**} = Q_{i,j}^{*} - \frac{\Delta t}{\Delta y} \left( G_{i,j+\frac{1}{2}}^{\*} - G_{i,j-\frac{1}{2}}^{\*}\right). $$
 
-where $F_{i-\frac{1}{2},j}$ is the numerical flux at the interface between cells $(i,j)$ and $(i-1,j)$ for the 1-dimensional problem in the x-direction and and, similarly, $G_{i,j-\frac{1}{2}}$ is the flux at the interface between cells $i,j$ and $i,j-1$ for the 1D problem in the y-direction.. In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
+where $F_{i-\frac{1}{2},j}$ is the numerical flux at the interface between cells $(i,j)$ and $(i-1,j)$ for the 1-dimensional problem in the x-direction and, similarly, $G_{i,j-\frac{1}{2}}$ is the flux at the interface between cells $(i,j)$ and $(i,j-1)$ for the 1D problem in the y-direction. In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
 
 **Step 2. Solve the diffusion equation:** 
 
