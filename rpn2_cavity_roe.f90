@@ -44,7 +44,7 @@ subroutine rpn2(ixy,maxm,meqn,mwaves,maux,mbc,mx,ql,qr,auxl,auxr,wave,s,amdq,apd
     dimension  apdq(meqn,          1-mbc:maxm+mbc)
     dimension  amdq(meqn,          1-mbc:maxm+mbc)
 
-!   # Re set in setprob.f90 file
+!   # Re set in setrun.f90 file
     common /cparam/ Re
 
 !   # Roe averages quantities of each interface

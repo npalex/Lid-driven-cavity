@@ -39,7 +39,7 @@ def setrun(claw_pkg='classic'):
     #------------------------------------------------------------------
 
     probdata = rundata.new_UserData(name='probdata',fname='setprob.data')
-    probdata.add_param('Re', 400., 'Reynolds number')
+    probdata.add_param('Re', 100., 'Reynolds number')
     
     #------------------------------------------------------------------
     # Standard Clawpack parameters to be written to claw.data:
@@ -116,7 +116,7 @@ def setrun(claw_pkg='classic'):
         # Output ntimes frames at equally spaced times up to tfinal:
         # Can specify num_output_times = 0 for no output
         clawdata.num_output_times = 200
-        clawdata.tfinal = 10.
+        clawdata.tfinal = 10.0
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
     elif clawdata.output_style == 2:
@@ -145,7 +145,6 @@ def setrun(claw_pkg='classic'):
     clawdata.verbosity = 1
     
     
-
     # --------------
     # Time stepping:
     # --------------

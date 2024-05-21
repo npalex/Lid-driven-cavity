@@ -12,7 +12,7 @@ c
       call opendatafile(iunit, fname)
                 
 c     # Reynolds number
-c      read(7,*) Re
+      read(7,*) Re
 	  
 	  
       return
