@@ -39,7 +39,7 @@ $$ \hat B =        \begin{bmatrix}
                                 \hat v & \hat u \\
                                 0 & 2 \hat v \end{bmatrix}. $$
 
-Here, $\hat u$ and $\hat v$ are Roe averages (in this case, they are linear interpolations of cell-centered velocities) defined at the edge of each grid cell. For example, Roe averages used to evaluate the matrix $A$ are given by
+Here, $\hat u$ and $\hat v$ are Roe averages (in this case, they are linear interpolations of cell-centered velocities) defined at the edge of each grid cell. For example, the Roe averages used to evaluate the matrix $A$ are given by
 
 $$ \hat u_{i-\frac{1}{2},j} = \frac{U_{i,j} + U_{i-1,j}}{2}$$
 
@@ -57,7 +57,7 @@ $$Q_{i,j}^{\*\*} = Q_{i,j}^{\*} - \frac{\Delta t}{\Delta y} \left( G_{i,j+\frac{
 
 where $F_{i-\frac{1}{2},j}$ is the numerical flux at the interface between cells $(i,j)$ and $(i-1,j)$ for the 1-dimensional problem in the x-direction and, similarly, $G_{i,j-\frac{1}{2}}$ is the flux at the interface between cells $(i,j)$ and $(i,j-1)$ for the 1D problem in the y-direction. In addition, monotenzied central flux limiters are used to achieve second order accuracy for this step where the solution is smooth. 
 
-&emsp; Note, a transverse Riemann solver has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
+&emsp; Note, a transverse Riemann solver (rpt2_cavity_roe.f90) has also been defined for this problem so that the corner-transport upwind method can be used instead of the DCU method if desired.
 
 ### **Step 2. Solve the diffusion equation:** 
 
@@ -75,7 +75,7 @@ $$ \widetilde Q_{i,j} = Q_{i,j}^{\*\*\*} + \frac{\alpha}{2}\left(\delta^2_x Q^{\
 
 The parameter $\alpha$ is defined by
 
-$$ \alpha = \frac{\Delta t}{(\Delta x)^2Re}.$$
+$$ \alpha = \frac{\Delta t}{(\Delta x)^2Re},$$
 
 and $\delta^2_x$ denotes the central difference of the 2nd partial derivative with respect to $x$.
 
@@ -93,13 +93,13 @@ $$ \nabla^2 p^{n+1} = \frac{1}{\Delta t} \nabla \cdot \widetilde q_{i,j} ,$$
 
 which is then discretized with Nuemann boundary conditions to produce a system of linear equations, $Ax = b$. However, the matrix $A$ is singular because the equation set has an inifinite number of solutions within an arbitrary reference pressure. Hence, a ficticious source term $C_0 p^{n+1}$ has been added with proportionality constant $C_0$, which is defined on the order of 1e-9 to render the influence of the source negligble, so that $A$ is non-singular.  
 
-&emsp;So far, the solution $\widetilde q$ is not divergence free. In order to satisfy continuity, $\widetilde q$ is projected into a divergence-free space by correcting the result for pressure-driven flow via
+&emsp;So far, the solution $\widetilde q$ is not divergence free. In order to satisfy continuity, the vector field $\widetilde q$ is projected into a divergence-free vector field by correcting the result for pressure-driven flow via
 
 $$ q_{i,j}^{n+1} = \widetilde q_{i,j} -\Delta t\nabla p^{n+1}$$
 
 ### **Step 5. Update the edge velocities for pressure-driven flow:**
 
-&emsp; The cell-centered velocities are determined by using central differences for the pressure gradient via
+&emsp; The edge velocities are determined by using central differences for the pressure gradient via
 
 $$ u_{i-\frac{1}{2},j}^{n+1} = \widetilde u_{i-\frac{1}{2},j} - \Delta t \left( \frac{p_{i,j}^{n+1} - p_{i-1,j}^{n+1}}{\Delta x}\right) $$
 
@@ -117,9 +117,11 @@ and
 
 $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - p_{i,j-1}^{n+1})}{2 \Delta y}\right), $$
 
-which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
 ## **Results**:
+
+
+which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
 ## **References**:
 

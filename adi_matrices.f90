@@ -1,9 +1,5 @@
 subroutine adi_matrices(a1, c1, a2, a2_bs, c2, b, b2 ,a1_ld ,a1_main ,a1_ud ,mx,my ,dx ,dy ,dt)
 
-!-------------------------------------------------------
-!   The purpose of this subroutine is to define the 
-!   matrices used to update the velocities for diffusion
-!-------------------------------------------------------
 	!------------------------------------------------------------------
 	!
 	!	Written by: Nathan Alexander (May 2024)
