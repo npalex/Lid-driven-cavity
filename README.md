@@ -122,7 +122,7 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 Vector field and pressure distribution for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30$
 
-Streamlines for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30$
+Streamlines for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
@@ -143,3 +143,6 @@ of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 
 
 4.	R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
 		University Press, Cambridge, UK, 2002.
+		
+5.	U. Ghia, K. Ghia, C. Shin, 1982. High-Re solutions for incompressible flow using the Navier–Stokes equations and a multigrid
+		method, J. Comput. Phys. 48, 387
