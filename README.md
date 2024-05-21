@@ -120,8 +120,15 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 ## **Results**:
 
+Vector field and pressure distribution for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30$
+
+Streamlines for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30$
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
+
+Numerical results for the U-velocity along vertical line through the center 
+of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
+
 
 ## **References**:
 
