@@ -77,9 +77,9 @@ xgrid, ygrid = np.meshgrid(x, y)
 fig = plt.figure(figsize=(6,6))
 ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
 
-#----------------------------------------------
+#------------------------------------------------
 #-- plot vector field and pressure distribution
-#----------------------------------------------
+#------------------------------------------------
 #-- define function, which is an argument for the method animation.FuncAnimation() and is called for each frame
 def fplot(frame_number):
     
@@ -108,9 +108,9 @@ plt.close()                        #-- removes residual plot at final time
 with open("Results_vector_field.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
     
-#-------------------
+#------------------------------------------------
 #-- plot streamlines
-#-------------------
+#------------------------------------------------
 fig = plt.figure(figsize=(6,6))
 ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
     
