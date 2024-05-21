@@ -16,8 +16,6 @@ $$ Re\left( \frac{\partial v}{\partial t} + \frac{\partial (u v)}{\partial x} + 
 
 $$Re = \frac{\rho U L}{\eta},$$
 
-![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b)
-
 where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid speed, and lid length, respectively, and $u$ and $v$ are the non-dimensional components of the fluid velocity in the $x$ and $y$ directions. The time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{L}{U}$ and the inertial pressure scale was chosen, equal to $\bar p = \rho U^2$. The boundary conditions are no-slip and no-flow at the cavity walls and the fluid is initially at rest. 
 
 ## **Numerical Scheme:**
@@ -130,7 +128,7 @@ which produces checkerboard oscillations in pressure. However, these oscillation
 
 Numerical results for the U-velocity along vertical line through the center 
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
-![data_comparison](\home\npalex\Lid-driven-cavity\_output\data_comparison.png)
+![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b)
 
 ## **References**:
 
