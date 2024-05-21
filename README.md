@@ -21,6 +21,7 @@ where $\rho$, $\eta$, $U$, and $L$ are the fluid density, fluid viscosity, lid s
 ## **Numerical Scheme:**
 &emsp; Following Lee and Leveque (2003),<sup>1</sup> a fractional step approach is used to solve the system of equations above, which decomposes the problem into the following steps:
 
+
 ### **Step 1. Solve the convection equation:**
 
 &emsp;A Roe solver $\textemdash$ i.e., a locally linear, approximate Riemann solver based on the Godunov method $\textemdash$ is employed to evaulate $q = (u,v)$ satisfying:
@@ -130,6 +131,7 @@ Numerical results for the U-velocity along vertical line through the center
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
 ![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b)
 
+![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/d55d4ced-984d-4594-b303-ac0540d7a6b5)
 ## **References**:
 
 1.	L.Lee and R.J.LeVeque, 2003. An immersed interface method for incompressible Navier
