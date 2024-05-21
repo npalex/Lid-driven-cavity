@@ -127,7 +127,7 @@ Streamlines for $Re = 1000$ using a 71x71 cell grid and $\bar t = 30
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
-Numerical results for the U-velocity along vertical line through the center 
+Numerical results for the u-velocity along a vertical line through the center 
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
 
 <img src="https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b" width="500">
