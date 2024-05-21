@@ -128,7 +128,7 @@ which produces checkerboard oscillations in pressure. However, these oscillation
 
 Numerical results for the U-velocity along vertical line through the center 
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
-![data_comparison](home\npalex\Lid-driven-cavity\_output\data_comparision.tif)
+![data_comparison](_output\data_comparision.tif)
 
 ## **References**:
 
