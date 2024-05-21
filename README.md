@@ -131,6 +131,8 @@ Numerical results for the U-velocity along vertical line through the center
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
 ![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b)
 
+<img src="[https://your-image-url.type](https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b)" width="100" height="100">
+
 ![data_comparision](https://github.com/npalex/Lid-driven-cavity/assets/169947150/d55d4ced-984d-4594-b303-ac0540d7a6b5)
 ## **References**:
 
