@@ -116,6 +116,7 @@ with open("Results_vector_field.html", "w") as f:
 #------------------------------------------------
 fig = plt.figure(figsize=(6,6))
 ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
+q_step = 1                           # quiver plot spacing
     
 #-- define function, which is an argument for the method animation.FuncAnimation() and is called for each frame
 def fplot(frame_number):
