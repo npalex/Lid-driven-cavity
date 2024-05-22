@@ -67,8 +67,8 @@ def setrun(claw_pkg='classic'):
     clawdata.upper[1] = 1.000000e+00          # yupper
     
     # Number of grid cells:
-    clawdata.num_cells[0] = 71     # mx
-    clawdata.num_cells[1] = 71      # my
+    clawdata.num_cells[0] = 51     # mx
+    clawdata.num_cells[1] = 51      # my
     
 
     # ---------------
@@ -116,7 +116,7 @@ def setrun(claw_pkg='classic'):
         # Output ntimes frames at equally spaced times up to tfinal:
         # Can specify num_output_times = 0 for no output
         clawdata.num_output_times = 200
-        clawdata.tfinal = 40.0
+        clawdata.tfinal = 10.0
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
     elif clawdata.output_style == 2:
@@ -178,13 +178,13 @@ def setrun(claw_pkg='classic'):
     clawdata.order = 2
     
     # Use dimensional splitting? (not yet available for AMR) (True (split) or False (unsplit))
-    clawdata.dimensional_split = False
+    clawdata.dimensional_split = True
     
     # For unsplit method, transverse_waves can be 
     #  0 or 'none'      ==> donor cell (only normal solver used)
     #  1 or 'increment' ==> corner transport of waves
     #  2 or 'all'       ==> corner transport of 2nd order corrections too
-    clawdata.transverse_waves = 2
+    clawdata.transverse_waves = 0
     
     
     # Number of waves in the Riemann solution:
