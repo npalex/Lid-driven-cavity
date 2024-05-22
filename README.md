@@ -125,7 +125,7 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/d4ac6e51-e6f0-48c3-b974-6e34846bc3af
 
-There are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
+Note, there are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-a796-2e42c74a1e09
 
@@ -133,8 +133,7 @@ https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/8a4407fd-7256-4e8a-8c90-c8b61ad3e954
 
-### **Numerical results for the x-component of the velocity along a vertical line through the center 
-### of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$**
+### **Numerical results for the x-component of the velocity along a vertical line through the center of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$**
 
 <img src="https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b" width="500">
 
