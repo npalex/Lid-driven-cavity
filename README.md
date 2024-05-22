@@ -33,7 +33,7 @@ where the Roe matrices $\hat A$ and $\hat B$ are apporoximate Jacobian matrices 
 $$ \hat A =        \begin{bmatrix} 
                                 2\hat u & 0 \\
                                 \hat v & \hat u \end{bmatrix}, $$
-
+				
 and
 
 $$ \hat B =        \begin{bmatrix} 
@@ -126,6 +126,8 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/d4ac6e51-e6f0-48c3-b974-6e34846bc3af
 
 There are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
+
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-a796-2e42c74a1e09
 
 ### **Streamlines for $Re = 1000$ and $CFL \leq 0.9$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
