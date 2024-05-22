@@ -123,7 +123,7 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 ### **Vector field and pressure distribution for $Re = 1000$ and $CFL \leq 0.9$ calculated using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
-https://github.com/npalex/Lid-driven-cavity/assets/169947150/d4ac6e51-e6f0-48c3-b974-6e34846bc3af
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/f2522ff7-5ea9-4c43-9687-874649e4b164
 
 Note, there are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
@@ -131,7 +131,7 @@ https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-
 
 ### **Streamlines for $Re = 1000$ and $CFL \leq 0.9$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
-https://github.com/npalex/Lid-driven-cavity/assets/169947150/8a4407fd-7256-4e8a-8c90-c8b61ad3e954
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/54e1dbe1-841d-4157-951e-62ec21349f7e
 
 ### **Numerical results for the x-component of the velocity along a vertical line through the center of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$**
 
