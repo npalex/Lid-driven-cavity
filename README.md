@@ -121,9 +121,9 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 ## **Results**:
 
-Vector field and pressure distribution for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40\bar t]$
+Vector field and pressure distribution for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40]$
 
-Streamlines for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40\bar t]$
+Streamlines for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40]$
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
 
