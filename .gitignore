@@ -21,3 +21,6 @@ __pycache__
 
 # ipython
 .ipynb_checkpoints
+
+# videos
+*.mp4

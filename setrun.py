@@ -39,7 +39,7 @@ def setrun(claw_pkg='classic'):
     #------------------------------------------------------------------
 
     probdata = rundata.new_UserData(name='probdata',fname='setprob.data')
-    probdata.add_param('Re', 100., 'Reynolds number')
+    probdata.add_param('Re', 1000., 'Reynolds number')
     
     #------------------------------------------------------------------
     # Standard Clawpack parameters to be written to claw.data:
@@ -67,8 +67,8 @@ def setrun(claw_pkg='classic'):
     clawdata.upper[1] = 1.000000e+00          # yupper
     
     # Number of grid cells:
-    clawdata.num_cells[0] = 31     # mx
-    clawdata.num_cells[1] = 31      # my
+    clawdata.num_cells[0] = 71     # mx
+    clawdata.num_cells[1] = 71      # my
     
 
     # ---------------
@@ -116,7 +116,7 @@ def setrun(claw_pkg='classic'):
         # Output ntimes frames at equally spaced times up to tfinal:
         # Can specify num_output_times = 0 for no output
         clawdata.num_output_times = 200
-        clawdata.tfinal = 10.0
+        clawdata.tfinal = 40.0
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
     elif clawdata.output_style == 2:
@@ -162,7 +162,7 @@ def setrun(claw_pkg='classic'):
     clawdata.dt_max = 1.000000e+99
     
     # Desired Courant number if variable dt used 
-    clawdata.cfl_desired = 0.400000
+    clawdata.cfl_desired = 0.900000
     # max Courant number to allow without retaking step with a smaller dt:
     clawdata.cfl_max = 1.000000
     

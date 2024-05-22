@@ -67,7 +67,7 @@ for k in range(0, meqn):
 #------------------------------------------------
 #-- plot results as an animation using matplotlib
 #------------------------------------------------
-q_step = 1                           # quiver plot spacing
+q_step = 2                           # quiver plot spacing
 
 #-- define array of cell centers
 x = np.arange(xlow + dx/2, 1, dx)
@@ -86,7 +86,7 @@ def fplot(frame_number):
     ax.clear()
     
     #-- plot pressure distribution
-    ax.pcolormesh(xgrid, ygrid, q[2,frame_number,:,:], cmap = 'coolwarm',vmin =-.05, vmax = .05) #--cmap = 'GnBu'
+    ax.pcolormesh(xgrid, ygrid, q[2,frame_number,:,:], cmap = 'coolwarm',vmin =-.1, vmax = .1) #--cmap = 'GnBu'
     
     #-- plot velocity distribution
     ax.quiver(x[::q_step], y[::q_step], q[0,frame_number,::q_step,::q_step], q[1,frame_number,::q_step,::q_step], scale_units = 'xy', scale = 1)
@@ -96,6 +96,9 @@ def fplot(frame_number):
     ax.set_yticks(np.arange(0, 1.2, .2))
     ax.set_xlim(left = 0, right = 1.)
     ax.set_ylim(bottom = 0, top = 1.)
+    
+    ax.set_ylabel('$u$', fontsize = 16)
+    ax.set_xlabel('$y$', fontsize = 16)
     
     return()
 
@@ -127,6 +130,9 @@ def fplot(frame_number):
     ax.set_yticks(np.arange(0, 1.2, .2))
     ax.set_xlim(left = 0, right = 1.)
     ax.set_ylim(bottom = 0, top = 1.)
+    
+    ax.set_ylabel('$u$', fontsize = 16)
+    ax.set_xlabel('$y$', fontsize = 16)
     
     return()
 
