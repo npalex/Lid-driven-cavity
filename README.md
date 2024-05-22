@@ -121,13 +121,13 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 ## **Results**:
 
-### **Vector field and pressure distribution for $Re = 1000$ and $CFL \leq 0.9$ calcualted using the donor cell upwind (DCU) method on a 71x71 cell grid over the time interval $[0, 40]$**
+### **Vector field and pressure distribution for $Re = 1000$ and $CFL \leq 0.9$ calculated using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/d4ac6e51-e6f0-48c3-b974-6e34846bc3af
 
-There are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the corner transport upwind method with $CFL \leq 0.5$, as shown in the following video: 
+There are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
-### **Streamlines for $Re = 1000$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
+### **Streamlines for $Re = 1000$ and $CFL \leq 0.9$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/8a4407fd-7256-4e8a-8c90-c8b61ad3e954
 
