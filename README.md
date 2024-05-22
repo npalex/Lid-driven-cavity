@@ -134,7 +134,7 @@ https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/8a4407fd-7256-4e8a-8c90-c8b61ad3e954
 
 ### **Numerical results for the x-component of the velocity along a vertical line through the center 
-of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$**
+### of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$**
 
 <img src="https://github.com/npalex/Lid-driven-cavity/assets/169947150/9405887d-f39f-4f59-982d-b6b38b85c67b" width="500">
 
