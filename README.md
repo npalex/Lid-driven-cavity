@@ -129,7 +129,7 @@ There are checkerboard oscillations in pressure. However, these oscillations do 
 
 ### **Streamlines for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40]$**
 
-which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/8a4407fd-7256-4e8a-8c90-c8b61ad3e954
 
 Numerical results for the u-velocity along a vertical line through the center 
 of the cavity are compared with those of Ghia et al.<sup>5</sup> for $Re = 100, 400,$ and $1000$
