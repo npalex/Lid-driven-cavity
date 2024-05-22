@@ -178,13 +178,13 @@ def setrun(claw_pkg='classic'):
     clawdata.order = 2
     
     # Use dimensional splitting? (not yet available for AMR) (True (split) or False (unsplit))
-    clawdata.dimensional_split = True
+    clawdata.dimensional_split = False
     
     # For unsplit method, transverse_waves can be 
     #  0 or 'none'      ==> donor cell (only normal solver used)
     #  1 or 'increment' ==> corner transport of waves
     #  2 or 'all'       ==> corner transport of 2nd order corrections too
-    clawdata.transverse_waves = 0
+    clawdata.transverse_waves = 2
     
     
     # Number of waves in the Riemann solution:
