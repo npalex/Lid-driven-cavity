@@ -123,6 +123,8 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 Vector field and pressure distribution for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40]$
 
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/d4ac6e51-e6f0-48c3-b974-6e34846bc3af
+
 Streamlines for $Re = 1000$ using a 71x71 cell grid over the time interval $[0, 40]$
 
 which produces checkerboard oscillations in pressure. However, these oscillations do not affect the accuracy of the velocity field.
