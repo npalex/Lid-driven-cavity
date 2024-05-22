@@ -36,7 +36,7 @@ subroutine poisson_matrices(bu, bv, a_bs, mx, my, dx, dy, dt)
 
 
 	!-- define parameters
-	c_0 = 0.00000001d0					! proportionality constant for fictiticous pressure source  
+	c_0 = 0.000000001d0					! proportionality constant for fictiticous pressure source  
 	
 	!-- initialize arrays
 	a_bs = 0.d0							! matrix A in banded storage	

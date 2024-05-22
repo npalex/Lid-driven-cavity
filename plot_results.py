@@ -97,8 +97,8 @@ def fplot(frame_number):
     ax.set_xlim(left = 0, right = 1.)
     ax.set_ylim(bottom = 0, top = 1.)
     
-    ax.set_ylabel('$u$', fontsize = 16)
-    ax.set_xlabel('$y$', fontsize = 16)
+    ax.set_ylabel('$y$', fontsize = 16)
+    ax.set_xlabel('$x$', fontsize = 16)
     
     return()
 
@@ -108,7 +108,7 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_vector_field_CTU.html", "w") as f:
+with open("Results_vector_field_CTU_CFL_0_5.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
     
 #------------------------------------------------
@@ -132,8 +132,8 @@ def fplot(frame_number):
     ax.set_xlim(left = 0, right = 1.)
     ax.set_ylim(bottom = 0, top = 1.)
     
-    ax.set_ylabel('$u$', fontsize = 16)
-    ax.set_xlabel('$y$', fontsize = 16)
+    ax.set_ylabel('$y$', fontsize = 16)
+    ax.set_xlabel('$x$', fontsize = 16)
     
     return()
 
@@ -143,5 +143,5 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_streamlines_CTU.html", "w") as f:
+with open("Results_streamlines_CTU_CFL_0_5.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
