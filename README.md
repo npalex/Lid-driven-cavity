@@ -123,6 +123,8 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 ### **Streamlines and pressure distribution for $Re = 1000$ and $CFL \leq 0.9$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/b920cc8c-8b3f-41e6-be31-45cd7e1039b1
+
 Note, there are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/861f56f0-6931-4812-be99-e4c5d8761bd8
@@ -145,5 +147,5 @@ https://github.com/npalex/Lid-driven-cavity/assets/169947150/861f56f0-6931-4812-
 4.	R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
 		University Press, Cambridge, UK, 2002.
 		
-5.	U. Ghia, K. Ghia, C. Shin, 1982. High-Re solutions for incompressible flow using the Navier–Stokes equations and a multigrid
-		method, J. Comput. Phys. 48, 387
+5.	U. Ghia, K. Ghia, C. Shin, 1982. High-Re solutions for incompressible flow using the Navier–Stokes equations and 		a multigrid method, J. Comput. Phys. 48, 387
+
