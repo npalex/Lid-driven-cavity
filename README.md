@@ -125,7 +125,7 @@ $$ V_{i,j}^{n+1} = \widetilde V_{i,j} - \Delta t \left( \frac{p_{i,j+1}^{n+1} - 
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/b920cc8c-8b3f-41e6-be31-45cd7e1039b1
 
-Note, there are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
+Note, there are significant checkerboard oscillations in pressure. However, the oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
 https://github.com/npalex/Lid-driven-cavity/assets/169947150/861f56f0-6931-4812-be99-e4c5d8761bd8
 
