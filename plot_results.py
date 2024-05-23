@@ -108,23 +108,32 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_vector_field_DCU_CFL_0_9.html", "w") as f:
+with open("Results_vector_field_CTU_CFL_0_5.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
     
 #------------------------------------------------
 #-- plot streamlines
 #------------------------------------------------
-fig = plt.figure(figsize=(6,6))
+fig = plt.figure(figsize = (7.5, 6), layout = "tight")
 ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
 q_step = 1                           # quiver plot spacing
-    
+
+#-- generate colorbar
+ax.axis('square')
+p = ax.pcolormesh(xgrid, ygrid, q[2,0,:,:], cmap = 'coolwarm',vmin =-.06, vmax = .06)
+cbar = fig.colorbar(p, fraction = 0.045, pad = 0.05, ticks = np.arange(-0.06, .08, 0.02))
+cbar.set_label('$p/(\u03C1 U^2)$', size = 20)
+
 #-- define function, which is an argument for the method animation.FuncAnimation() and is called for each frame
 def fplot(frame_number):
     
     ax.clear()
     
+    #-- plot pressure distribution
+    ax.pcolormesh(xgrid, ygrid, q[2,frame_number,:,:], cmap = 'coolwarm',vmin =-.06, vmax = .06)
+    
     #-- plot velocity distribution
-    ax.streamplot(xgrid, ygrid, q[0,frame_number,::q_step,::q_step], q[1,frame_number,::q_step,::q_step], color = "black", linewidth = .5, density=.8, broken_streamlines=False)  
+    ax.streamplot(xgrid, ygrid, q[0,frame_number,::q_step,::q_step], q[1,frame_number,::q_step,::q_step], color = "black", linewidth = .3, density=.7, broken_streamlines=False)  
 
     #-- set axex limits and tick marks
     ax.set_xticks(np.arange(0, 1.2, .2))
@@ -143,5 +152,5 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_streamlines_DCU_CFL_0_9.html", "w") as f:
+with open("Results_streamlines_CTU_CFL_0_5.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
