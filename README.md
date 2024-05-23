@@ -127,7 +127,7 @@ https://github.com/npalex/Lid-driven-cavity/assets/169947150/f2522ff7-5ea9-4c43-
 
 Note, there are significant checkerboard oscillations in pressure. The oscillations are less prominent when using the CTU method with $CFL \leq 0.5$, as shown in the following video: 
 
-https://github.com/npalex/Lid-driven-cavity/assets/169947150/9fc48884-a6fe-4074-a796-2e42c74a1e09
+https://github.com/npalex/Lid-driven-cavity/assets/169947150/861f56f0-6931-4812-be99-e4c5d8761bd8
 
 ### **Streamlines for $Re = 1000$ and $CFL \leq 0.9$ using the DCU method on a 71x71 cell grid over the time interval $[0, 40]$**
 
