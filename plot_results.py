@@ -108,7 +108,7 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_vector_field_CTU_CFL_0_5.html", "w") as f:
+with open("Results_vector_field_DCU_CFL_0_9.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
     
 #------------------------------------------------
@@ -152,5 +152,5 @@ plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
 #-- save animation as an html file
-with open("Results_streamlines_CTU_CFL_0_5.html", "w") as f:
+with open("Results_streamlines_DCU_CFL_0_9.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
